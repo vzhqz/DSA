@@ -1,21 +1,43 @@
-// Linear search algorithm. O(n) time complexity
+// Linear Search Algorithm. O(n) Time Complexity
 public class LinearSearch {
-    private LinearSearch() {
-        throw new UnsupportedOperationException();
-    };
+    private LinearSearch() { throw new UnsupportedOperationException(); };
 
-    // --- ONLY ACCEPTS WRAPPER CLASSES (for more versatility) ---
-    public static int search(Object[] array, Object value) {
-        // Loop through the array starting from index 0 all the way to the last index (array.length)
+    /**
+     * The Linear Search Algorithm takes in an array and a target value as arguments.
+     * <p>
+     *     The algorithm works by looping through the array:
+     *     <ul>
+     *         <li>Compare each element in the array to the target.</li>
+     *         <li>If an element equals the target, return the index of the element</li>
+     *         <li>If no element equals the target, return -1</li>
+     *     </ul>
+     * </p>
+     * Note: The array doesn't have to be sorted in any order.
+     */
+
+    // --- primitive data type (int) ---
+    public static int search(int[] array, int target) {
         for(int i = 0; i < array.length; i++) {
-            // We are checking every index if it matches the value we are looking for
-            if(array[i].equals(value)) {
-                // If the index value matches our specified value, return the index of that value
-                return i;
-            }
+            // found at index i
+            if(array[i] == target) return i;
         }
-        // If we didn't find the value we were looking for, return the integer -1
+        // not found
+        return -1;
+    }
+
+    // --- primitive data type (double) ---
+    public static int search(double[] array, double target) {
+        for(int i = 0; i < array.length; i++) {
+            if(array[i] == target) return i;
+        }
+        return -1;
+    }
+
+    // --- String data type ---
+    public static int search(String[] array, String target) {
+        for(int i = 0; i < array.length; i++) {
+            if(array[i].equals(target)) return i;
+        }
         return -1;
     }
 }
-
