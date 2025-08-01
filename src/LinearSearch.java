@@ -1,5 +1,9 @@
 // Linear search algorithm. O(n) time complexity
 public class LinearSearch {
+    private LinearSearch() {
+        throw new UnsupportedOperationException();
+    };
+
     // --- ONLY ACCEPTS WRAPPER CLASSES (for more versatility) ---
     public static int search(Object[] array, Object value) {
         // Loop through the array starting from index 0 all the way to the last index (array.length)
