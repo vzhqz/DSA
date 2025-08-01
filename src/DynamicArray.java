@@ -52,7 +52,7 @@ public class DynamicArray<T> {
                 }
                 array[size - 1] = null;
                 size--;
-                if(size <= (capacity / 3)) {
+                if(size <= (capacity / 4)) {
                     shrink();
                 }
                 break;
@@ -69,7 +69,7 @@ public class DynamicArray<T> {
                 }
                 array[size - 1] = null;
                 size--;
-                if(size <= (capacity / 4)) {
+                if(size <= (capacity / 3)) {
                     shrink();
                 }
             }
