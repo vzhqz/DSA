@@ -1,7 +1,7 @@
 @SuppressWarnings({"unused", "unchecked"})
 public class DynamicArray<T> {
     private int size;
-    private int capacity = 10;
+    private int capacity = 4;
     private T[] array;
 
     // --- Constructors ---
@@ -69,7 +69,7 @@ public class DynamicArray<T> {
                 }
                 array[size - 1] = null;
                 size--;
-                if(size <= (capacity / 3)) {
+                if(size <= (capacity / 4)) {
                     shrink();
                 }
             }
