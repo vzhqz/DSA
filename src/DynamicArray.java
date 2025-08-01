@@ -1,7 +1,8 @@
+@SuppressWarnings({"unused", "unchecked"})
 public class DynamicArray<T> {
     private int size;
     private int capacity = 10;
-    T[] array;
+    private T[] array;
 
     // --- Constructors ---
     public DynamicArray() {
@@ -9,6 +10,7 @@ public class DynamicArray<T> {
     }
 
     public DynamicArray(int capacity) {
+        if(capacity < 1) throw new IllegalArgumentException();
         this.capacity = capacity;
         this.array = (T[]) new Object[capacity];
     }
@@ -155,16 +157,14 @@ public class DynamicArray<T> {
     // --- Overriding the toString method ---
     @Override
     public String toString() {
-        String string = "";
+        if(isEmpty()) return "[]";
+        StringBuilder sb = new StringBuilder("[");
         for(int i = 0; i < size; i++) {
-            string += array[i] + ", ";
+            sb.append(array[i]);
+            if(i < size - 1) sb.append(", ");
         }
-        if(!string.isEmpty()) {
-            string = "[" + string.substring(0, string.length() - 2) + "]";
-        }
-        else {
-            string = "[]";
-        }
-        return string;
+        sb.append("]");
+
+        return sb.toString();
     }
 }
