@@ -1,4 +1,9 @@
-// Linear Search Algorithm. O(n) Time Complexity
+/**
+ * <h3>Linear Search Algorithm</h3>
+ * <ul>
+ *     <li>Time Complexity: <b>O(n)</b></li>
+ * </ul>
+ */
 public class LinearSearch {
     private LinearSearch() { throw new UnsupportedOperationException(); };
 

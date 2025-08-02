@@ -1,4 +1,9 @@
-// Binary Search Algorithm. O(log n) Time complexity
+/**
+ * <h3>Binary Search Algorithm</h3>
+ * <ul>
+ *     <li>Time complexity: <b>O(log(n))</b></li>
+ * </ul>
+ */
 public class BinarySearch {
     private BinarySearch() { throw new UnsupportedOperationException(); }
 
@@ -14,7 +19,7 @@ public class BinarySearch {
      *     </ul>
      *     This process continues until the target is found or the range is empty.
      * </p>
-     * Note: the array must be sorted in ascending order.
+     * <p><b>Note: the array must be sorted in ascending order.</b></p>
      */
 
     // --- primitive data type (int) ---
@@ -55,11 +60,11 @@ public class BinarySearch {
         int high = array.length - 1;
 
         while(low <= high) {
-            int middle = low + (low + high) / 2;
+            int middle = low + (high - low) / 2;
             String value = array[middle];
 
             if(value.compareToIgnoreCase(target) < 0) low = middle + 1;
-            if(value.compareToIgnoreCase(target) > 0) high = middle - 1;
+            else if(value.compareToIgnoreCase(target) > 0) high = middle - 1;
             else return middle;
         }
         return -1;
