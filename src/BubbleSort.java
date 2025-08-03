@@ -9,13 +9,14 @@ public class BubbleSort {
 
     /**
      *
-     * The Bubble Sort Algorithm works by comparing adjacent pair of elements:
+     * The Bubble Sort Algorithm works by:
      * <ul>
+     *     <li>Comparing adjacent pairs of elements</li>
      *     <li>If the pairs are in order, if not, the elements are swapped.</li>
      *     <li>This goes on until all the elements are in order and the array is sorted.</li>
      * </ul>
      *
-     * <p>This sorting algorithm is fine for smaller data sets, but bad for large data sets.</p>
+     * <p><b>Note: the larger the data set, the more inefficient this algorithm is going to be.</b></p>
      */
 
     // --- primitive data type (int) ---
